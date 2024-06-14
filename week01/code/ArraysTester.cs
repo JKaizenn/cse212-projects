@@ -30,15 +30,18 @@ public static class ArraysTester
     }
 
     /// <summary>
-    /// This function will produce a list of size 'length' starting with 'number' followed by multiples of 'number'.  For 
-    /// example, MultiplesOf(7, 5) will result in: {7, 14, 21, 28, 35}.  Assume that length is a positive
+    /// This function will produce a list of size 'length' starting with 'number' followed by multiples of 'number'.
+    /// For example, MultiplesOf(7, 5) will result in: {7, 14, 21, 28, 35}. Assume that length is a positive
     /// integer greater than 0.
     /// </summary>
     /// <returns>array of doubles that are the multiples of the supplied number</returns>
     private static double[] MultiplesOf(double number, int length)
     {
-        // Step 1: Define the function signature
-        // The function takes two parameters: number (the starting number) and length (the number of multiples)
+        // Plan:
+        // 1. Define the function signature: The function takes two parameters - number (the starting number) and length (the number of multiples).
+        // 2. Initialize the array: Create an array of doubles with the size specified by the length parameter.
+        // 3. Fill the array with multiples: Use a loop to calculate each multiple and store it in the array.
+        // 4. Return the array: After the loop completes, return the array.
 
         // Step 2: Initialize the array
         double[] multiples = new double[length];
@@ -54,17 +57,20 @@ public static class ArraysTester
     }
 
     /// <summary>
-    /// Rotate the 'data' to the right by the 'amount'.  For example, if the data is 
-    /// <c>&lt;List&gt;{1, 2, 3, 4, 5, 6, 7, 8, 9}</c> and an amount is 3 then the list returned should be 
-    /// <c>&lt;List&gt;{7, 8, 9, 1, 2, 3, 4, 5, 6}</c>.  The value of amount will be in the range of <c>1</c> and 
-    /// <c>data.Count</c>.
-    /// <br /><br />
-    /// Because a list is dynamic, this function will modify the existing <c>data</c> list rather than returning a new list.
+    /// Rotate the 'data' to the right by the 'amount'. For example, if the data is <List>{1, 2, 3, 4, 5, 6, 7, 8, 9}
+    /// and an amount is 3, then the list returned should be <List>{7, 8, 9, 1, 2, 3, 4, 5, 6}. The value of amount will
+    /// be in the range of 1 and data.Count.
     /// </summary>
+    /// <param name="data">The list to be rotated</param>
+    /// <param name="amount">The amount by which to rotate the list</param>
     private static void RotateListRight(List<int> data, int amount)
     {
-        // Step 1: Define the function signature
-        // The function takes two parameters: data (the list of data) and amount (the amount to rotate)
+        // Plan:
+        // 1. Define the function signature: The function takes two parameters - data (the list of data) and amount (the amount to rotate).
+        // 2. Handle edge cases: If the amount is 0 or equal to the length of the list, return the list as is.
+        // 3. Calculate the split point: Determine where to split the list based on the amount.
+        // 4. Create the new rotated list: Use list slicing to create the rotated list.
+        // 5. Clear the original list and copy the rotated list into it: Update the original list with the new order.
 
         // Step 2: Handle edge cases
         if (amount == 0 || amount == data.Count)
