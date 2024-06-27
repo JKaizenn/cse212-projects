@@ -23,8 +23,21 @@
     }
 
     private static int CountDuplicates(int[] data)
+
+    //Count how many duplicates are in a collection of data.
     {
-        // Add code here.
-        return 0;
+        var seen = new HashSet<int>();
+        var duplicates = new HashSet<int>();
+
+            foreach (var item in data)
+        {
+    // If this item is already in the seen set, add it to the duplicates set.
+            if (!seen.Add(item))
+            {
+                duplicates.Add(item);
+            }
+        }
+    // Return the number of items in the duplicates set.
+        return duplicates.Count;
     }
 }
