@@ -26,6 +26,21 @@ public static class SetsAndMapsTester {
         // 94 & 49
         // 31 & 13
 
+//Finds the matching sets
+
+static void DisplayPairs(string[] words) {
+
+    var set = new HashSet<string>();
+    foreach (var word in words) {
+        var reverse = new string(word.Reverse().ToArray());
+        if (set.Contains(reverse)) {
+            Console.WriteLine($"{reverse} & {word}");
+        } else {
+            set.Add(word);
+        }
+    }
+}
+
         // Problem 2: Degree Summary
         // Sample Test Cases (may not be comprehensive) 
         Console.WriteLine("\n=========== Census TESTS ===========");
