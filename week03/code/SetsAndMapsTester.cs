@@ -60,24 +60,7 @@ public static class SetsAndMapsTester
 
         //Summarize Degree 
 
-        // static Dictionary<string, int> SummarizeDegrees(string filename)
-        // {
-        //     var degrees = new Dictionary<string, int>();
-        //     foreach (var line in File.ReadLines(filename))
-        //     {
-        //         var fields = line.Split(",");
-        //         var degree = fields[3];
-        //         if (degrees.ContainsKey(degree))
-        //         {
-        //             degrees[degree]++;
-        //         }
-        //         else
-        //         {
-        //             degrees[degree] = 1;
-        //         }
-        //     }
-        //     return degrees;
-
+        
             // Problem 3: Anagrams
             // Sample Test Cases (may not be comprehensive) 
             Console.WriteLine("\n=========== Anagram TESTS ===========");
